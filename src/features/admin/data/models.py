@@ -23,3 +23,15 @@ class GameWeekModel(BaseModel):
     status: str = "À venir"
     closing_at: datetime
     created_at: Optional[datetime] = None
+
+
+class MatchModel(BaseModel):
+    id: Optional[int] = None
+    gameweek_id: int
+    home_team: str
+    away_team: str
+    home_score: Optional[int] = None
+    away_score: Optional[int] = None
+    match_date: datetime
+    status: str = "Programmé"
+    created_at: Optional[datetime] = None
